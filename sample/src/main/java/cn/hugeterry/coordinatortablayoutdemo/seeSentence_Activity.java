@@ -221,7 +221,7 @@ public class seeSentence_Activity extends AppCompatActivity {
         //툴바 설정
         toolbar.setTitleTextColor(Color.parseColor("#ffff33")); //제목의 칼라
         toolbar.setSubtitle(category_name); //부제목 넣기
-        //toolbar.setNavigationIcon(R.mipmap.logo); //제목앞에 아이콘 넣기
+        //toolbar.setNavigationIcon(R.mipmap.ic_launcher); //제목앞에 아이콘 넣기
         setSupportActionBar(toolbar); //툴바를 액션바와 같게 만들어 준다.
     }
 
@@ -254,7 +254,7 @@ public class seeSentence_Activity extends AppCompatActivity {
     }
 
     private void updateContents(){ // 애초에 컨텐츠가 여러 개라는 조건
-        if (index == spelling.size()-1){ // 현재 위치가 마지막일 때 -> index를 그 전껄로 설정해야 함.
+        if (index == spelling.size()){ // 현재 위치가 마지막일 때 -> index를 그 전껄로 설정해야 함.
             index -=1;
         }
         // 현재 Index 로 내용 설정 다시 하기

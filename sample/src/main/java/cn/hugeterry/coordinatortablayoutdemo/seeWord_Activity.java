@@ -63,7 +63,7 @@ public class seeWord_Activity extends AppCompatActivity {
         del = (Button)findViewById(R.id.del);
         befo = (Button)findViewById(R.id.before);
         next = (Button)findViewById(R.id.next);
-       // showM = (Button)findViewById(R.id.showMeaning);
+        // showM = (Button)findViewById(R.id.showMeaning);
         contents = (TextView)findViewById(R.id.txtContents);
 
         init();
@@ -231,7 +231,7 @@ public class seeWord_Activity extends AppCompatActivity {
         //툴바 설정
         toolbar.setTitleTextColor(Color.parseColor("#ffff33")); //제목의 칼라
         toolbar.setSubtitle(category_name); //부제목 넣기
-        //toolbar.setNavigationIcon(R.mipmap.logo); //제목앞에 아이콘 넣기
+        //toolbar.setNavigationIcon(R.mipmap.ic_launcher); //제목앞에 아이콘 넣기
         setSupportActionBar(toolbar); //툴바를 액션바와 같게 만들어 준다.
     }
 
@@ -263,9 +263,10 @@ public class seeWord_Activity extends AppCompatActivity {
     }
 
     private void updateContents(){ // 애초에 컨텐츠가 여러 개라는 조건
-        if (index == spelling.size()-1){ // 현재 위치가 마지막일 때 -> index를 그 전껄로 설정해야 함.
+        if (index == spelling.size()){ // 현재 위치가 마지막일 때 -> index를 그 전껄로 설정해야 함.
+            // 여기 들어올 때는 컨텐츠가 삭제되어 spelling size가 변동된 이후꺼임
             index -=1;
-        }
+        } // else는 삭제되는 것 다음에 내용이 있을때
         // 현재 Index 로 내용 설정 다시 하기
         contents.setText("[Spelling]\n"+spelling.get(index));
     }
@@ -313,7 +314,7 @@ public class seeWord_Activity extends AppCompatActivity {
 
         // 현재 단어가 DB에 있나?
         Cursor c = db.rawQuery("select spelling from contents where category_name='"+category_name+"' and spelling = '"
-                        +mSpelling+ "';" , null);
+                +mSpelling+ "';" , null);
 
         if(c.getCount() == 0){ // 존재하지 않는다.
             return true;
@@ -336,7 +337,7 @@ public class seeWord_Activity extends AppCompatActivity {
                 return true;
             }
             else { // star 가 1이라면
-                 break;
+                break;
             }
         }
         return false;
@@ -428,7 +429,7 @@ public class seeWord_Activity extends AppCompatActivity {
                 Cursor c = db.rawQuery(sql, null);
                 while(c.moveToNext()){
                     text = text + "\n[Spelling] : "+c.getString(0)+", [Meaning] : "+c.getString(1);
-                    }
+                }
 
                 shareIntent.putExtra(Intent.EXTRA_TEXT,text);
                 Intent chooser = Intent.createChooser(shareIntent,"친구에게 공유하기");

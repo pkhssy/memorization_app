@@ -65,9 +65,6 @@ public class OCR extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ocr);
 
-        //이미지 디코딩을 위한 초기화
-        //image = BitmapFactory.decodeResource(getResources(), R.drawable.test); // 이미지 파일 가져오기
-
         //언어파일 경로
         datapath = getFilesDir() + "/tesseract/";
 
@@ -80,20 +77,8 @@ public class OCR extends AppCompatActivity {
         mTess = new TessBaseAPI();
         mTess.init(datapath, lang);
 
-        //btn_capture = (Button) findViewById(R.id.btn_takePicture);
         btn_album = (Button) findViewById(R.id.btn_getAlbum);
         iv_view = (ImageView) findViewById(R.id.imageView);
-
-
-
-        /*btn_capture.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
-            @Override
-            public void onClick(View v) {
-                captureCamera();
-            }
-        });*/
-
         btn_album.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -162,7 +147,6 @@ public class OCR extends AppCompatActivity {
         intent.putExtra("OCRtxt",OCRresult);
         setResult(RESULT_OK,intent);
         finish();
-
     }
 
     //copy file to device
