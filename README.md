@@ -1,12 +1,12 @@
 # 암기하장
-<br><https://play.google.com/store/apps/details?id=cn.memorize.coordinatortablayout><br>
+<pre><a href="https://play.google.com/store/apps/details?id=cn.memorize.coordinatortablayout">https://play.google.com/store/apps/details?id=cn.memorize.coordinatortablayout/</a></pre>
 <img width="200" src="https://user-images.githubusercontent.com/32731032/87845402-dee63300-c901-11ea-89d8-944d26bdab23.png">
 
 ## Memorizing words on my way
-* Want to memorize words **efficiently**.
-* Want to **check** their learning level for themselves.
-* Want to study my **weak points** more intensively.
-* Want to have the most **optimal** memory for me.
+- [x] Want to memorize words **efficiently**.
+- [x] Want to **check** their learning level for themselves.
+- [x] Want to study my **weak points** more intensively.
+- [x] Want to have the most **optimal** memory for me.
 <br><br>
 
 ## Motivation
