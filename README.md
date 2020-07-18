@@ -9,10 +9,9 @@
 
 ## Motivation
 #### We want to make the most optimal memory for us
-
 * We need to memorize all sentences sometimes.
 * There aren’t many memorization apps for both ‘words’ and ‘sentences ’in market.
-* We want to memorize only what we need.
+* We want to memorize only what we need. <br><br>
 
 ## Feature
 <img width="800" src="https://user-images.githubusercontent.com/32731032/87845851-3ab2bb00-c906-11ea-85c8-1a17dbd7bad8.png"><br><br>
