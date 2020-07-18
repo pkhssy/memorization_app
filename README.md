@@ -1,7 +1,5 @@
 # 암기하장
-```
-<https://play.google.com/store/apps/details?id=cn.memorize.coordinatortablayout><br>
-```
+<br><https://play.google.com/store/apps/details?id=cn.memorize.coordinatortablayout><br>
 <img width="200" src="https://user-images.githubusercontent.com/32731032/87845402-dee63300-c901-11ea-89d8-944d26bdab23.png">
 
 ## Memorizing words on my way
